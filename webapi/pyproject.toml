@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "webapi"
+version = "0.1.0"
+description = ""
+authors = ["AddyR <adarsharegmi121@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fire = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+addy_core = {path="../vendor/addy_core-0.1.0-py3-none-any.whl"}
+chat_components = {path="../chat_components",develop=true}
+black = {version = "^21.8b0", allow-prereleases = true}
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+cli = "hisab_keeper_backend.console:main"
+run = "webapi.main:main"
